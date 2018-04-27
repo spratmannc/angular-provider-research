@@ -6,13 +6,19 @@ import { AppComponent } from "./app.component";
 import { MyBox } from "./components/box/box";
 import { ThemeProvider } from "./services/theme.provider";
 import { CurrentUserProvider } from "./services/user.provider";
+import { DynamicContainer } from "./components/dyncomp/dynamic";
+import { FormA } from "./components/forms/forma";
+import { FormB } from "./components/forms/formb";
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyBox
+    MyBox,
+    DynamicContainer,
+    FormA,
+    FormB
   ],
   imports: [
     BrowserModule
@@ -21,6 +27,10 @@ import { CurrentUserProvider } from "./services/user.provider";
     CurrentUserProvider,
     ThemeProvider
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    FormA,
+    FormB
+  ]
 })
 export class AppModule { }
