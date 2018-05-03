@@ -1,7 +1,5 @@
-import { IUser, IExperimentMap } from "../business/user";
-import { Injectable, InjectionToken, ValueProvider } from "@angular/core";
-import { FormA } from "../components/forms/forma";
-import { FormB } from "../components/forms/formb";
+import { IUser } from "../business/user";
+import { InjectionToken, ValueProvider } from "@angular/core";
 
 /** Token for next time */
 export const USER: InjectionToken<IUser> = new InjectionToken<IUser>("user");
@@ -14,7 +12,7 @@ export const CurrentUserProvider : ValueProvider = {
     useValue: <IUser> {
         name: "Roger",
         experiments: {
-            "bg": false
+            "bg": true
         },
         form: "FormA"
     }
